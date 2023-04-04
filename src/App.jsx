@@ -104,19 +104,38 @@ import Meme from "./components/Meme";
 //    );
 // }
 // -------------------------Challenge 6------------------------
-export default function App() {
-   const [isGoingOut, setIsGoingOut] = React.useState(true);
+// export default function App() {
+//    const [isGoingOut, setIsGoingOut] = React.useState(true);
 
-   function changeMind() {
-      setIsGoingOut((prevState) => !prevState);
-   }
+//    function changeMind() {
+//       setIsGoingOut((prevState) => !prevState);
+//    }
+
+//    return (
+//       <div className="state">
+//          <h1 className="state-title">Do I feel like going out tonight?</h1>
+//          <div className="state-value" onClick={changeMind}>
+//             <h1>{isGoingOut ? "Yes" : "No"}</h1>
+//          </div>
+//       </div>
+//    );
+// }
+// -------------------------Challenge 7------------------------
+export default function App() {
+   const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"]);
+
+   const addItem = () => {
+      setThingsArray((prevThingsArray) => {
+         return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`];
+      });
+   };
+   
+   const thingsElem = thingsArray.map((item, idx) => <p key={idx}>{item}</p>);
 
    return (
-      <div className="state">
-         <h1 className="state-title">Do I feel like going out tonight?</h1>
-         <div className="state-value" onClick={changeMind}>
-            <h1>{isGoingOut ? "Yes" : "No"}</h1>
-         </div>
+      <div className="container">
+         <button onClick={addItem}>Add Item</button>
+         {thingsElem}
       </div>
    );
 }

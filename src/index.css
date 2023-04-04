@@ -103,7 +103,7 @@ main {
 } */
 
 /* -------------------------Challenge 4------------------------ */
-.state {
+/* .state {
    height: 100vh;
    text-align: center;
    background-color: #0f0f12;
@@ -127,4 +127,49 @@ main {
    justify-content: center;
    align-items: center;
    user-select: none;
+} */
+/* -------------------------Challenge 4------------------------ */
+.counter {
+   height: 100vh;
+   text-align: center;
+   background-color: #0f0f12;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+.counter > button {
+   width: 2.5rem;
+   height: 2.5rem;
+   background-color: #4a4a67;
+   color: white;
+   border: none;
+   border-radius: 50%;
+   font-size: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   user-select: none;
+}
+.counter-count {
+   width: 6rem;
+   height: 6rem;
+   background-color: white;
+   color: #0f0f12;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   user-select: none;
+}
+.counter-minus {
+   position: absolute;
+   bottom: calc((100vh - 6rem) / 2);
+   left: calc((100vw - 9rem) / 2);
+}
+.counter-plus {
+   position: absolute;
+   bottom: calc((100vh - 6rem) / 2);
+   right: calc((100vw - 9rem) / 2);
 }

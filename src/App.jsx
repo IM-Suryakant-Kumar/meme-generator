@@ -62,19 +62,43 @@ import Meme from "./components/Meme";
 //    return `Good ${timeOfTheDay}, ${name}`;
 // }
 // -------------------------Challenge 4------------------------
-export default function App() {
-   const [isImportant, setIsImportant] = React.useState("Yes");
+// export default function App() {
+//    const [isImportant, setIsImportant] = React.useState("Yes");
 
-   function handleClick() {
-      setIsImportant(`${isImportant === "Yes" ? "No" : "Yes"}`);
-   }
+//    function handleClick() {
+//       setIsImportant(`${isImportant === "Yes" ? "No" : "Yes"}`);
+//    }
+
+//    return (
+//       <div className="state">
+//          <h1 className="state-title">Is state important to know?</h1>
+//          <div className="state-value" onClick={handleClick}>
+//             <h1>{isImportant}</h1>
+//          </div>
+//       </div>
+//    );
+// }
+// -------------------------Challenge 5------------------------
+export default function App() {
+   const [count, setCount] = React.useState(0);
 
    return (
-      <div className="state">
-         <h1 className="state-title">Is state important to know?</h1>
-         <div className="state-value" onClick={handleClick}>
-            <h1>{isImportant}</h1>
+      <div className="counter">
+         <button
+            className="counter-minus"
+            onClick={() => setCount((prevCount) => prevCount - 1)}
+         >
+            -
+         </button>
+         <div className="counter-count">
+            <h1>{count}</h1>
          </div>
+         <button
+            className="counter-plus"
+            onClick={() => setCount((prevCount) => prevCount + 1)}
+         >
+            +
+         </button>
       </div>
    );
 }

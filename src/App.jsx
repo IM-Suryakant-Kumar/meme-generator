@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Meme from "./components/Meme";
 
 // export default function App() {
+
 //    return (
 //       <div>
 //          <Header />
@@ -79,26 +80,41 @@ import Meme from "./components/Meme";
 //    );
 // }
 // -------------------------Challenge 5------------------------
+// export default function App() {
+//    const [count, setCount] = React.useState(0);
+
+//    return (
+//       <div className="counter">
+//          <button
+//             className="counter-minus"
+//             onClick={() => setCount((prevCount) => prevCount - 1)}
+//          >
+//             -
+//          </button>
+//          <div className="counter-count">
+//             <h1>{count}</h1>
+//          </div>
+//          <button
+//             className="counter-plus"
+//             onClick={() => setCount((prevCount) => prevCount + 1)}
+//          >
+//             +
+//          </button>
+//       </div>
+//    );
+// }
+// -------------------------Challenge 6------------------------
 export default function App() {
-   const [count, setCount] = React.useState(0);
+   const isGoingOut = true;
+
+   const answer = isGoingOut === true ? "Yes" : "No";
 
    return (
-      <div className="counter">
-         <button
-            className="counter-minus"
-            onClick={() => setCount((prevCount) => prevCount - 1)}
-         >
-            -
-         </button>
-         <div className="counter-count">
-            <h1>{count}</h1>
+      <div className="state">
+         <h1 className="state-title">Do I feel like going out tonight?</h1>
+         <div className="state-value">
+            <h1>{answer}</h1>
          </div>
-         <button
-            className="counter-plus"
-            onClick={() => setCount((prevCount) => prevCount + 1)}
-         >
-            +
-         </button>
       </div>
    );
 }

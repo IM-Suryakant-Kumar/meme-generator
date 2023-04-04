@@ -2,14 +2,14 @@ import React from "react";
 import Header from "./components/Header";
 import Meme from "./components/Meme";
 
-export default function App() {
-   return (
-      <div>
-         <Header />
-         <Meme />
-      </div>
-   );
-}
+// export default function App() {
+//    return (
+//       <div>
+//          <Header />
+//          <Meme />
+//       </div>
+//    );
+// }
 
 // -------------------------Challenge 1------------------------
 // export default function App() {
@@ -62,17 +62,19 @@ export default function App() {
 //    return `Good ${timeOfTheDay}, ${name}`;
 // }
 // -------------------------Challenge 4------------------------
-// export default function App() {
+export default function App() {
+   const [isImportant, setIsImportant] = React.useState("Yes");
 
-//    const result = React.useState("No")
-//    console.log(result);
+   function handleClick() {
+      setIsImportant(`${isImportant === "Yes" ? "No" : "Yes"}`);
+   }
 
-//    return (
-//       <div className="state">
-//          <h1 className="state-title">Is state important to know?</h1>
-//          <div className="state-value">
-//             <h1>{result[0]}</h1>
-//          </div>
-//       </div>
-//    );
-// }
+   return (
+      <div className="state">
+         <h1 className="state-title">Is state important to know?</h1>
+         <div className="state-value" onClick={handleClick}>
+            <h1>{isImportant}</h1>
+         </div>
+      </div>
+   );
+}

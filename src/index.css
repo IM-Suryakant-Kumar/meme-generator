@@ -7,60 +7,98 @@ body {
    margin: 0;
 }
 
+main {
+   padding: 36px;
+}
+
 .header {
    display: flex;
    align-items: center;
-   height: 4.5rem;
-   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+   height: 65px;
+   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
    color: white;
-   padding: 1.25rem;
+   padding: 20px;
 }
 
-.header-img {
+.header--image {
    height: 100%;
-   margin-right: 0.4rem;
+   margin-right: 6px;
 }
 
-.header-title {
+.header--title {
    font-size: 1.25rem;
    margin-right: auto;
 }
 
-.header-project {
+.header--project {
    font-size: 0.75rem;
    font-weight: 500;
-}
-
-main {
-   padding: 2.25rem;
 }
 
 .form {
    display: grid;
    grid-template: 40px 40px / 1fr 1fr;
-   gap: 0.8rem 1rem;
+   gap: 17px;
+   margin-bottom: 17px;
 }
 
-.form-input {
+.form--input {
    font-family: "Karla", sans-serif;
-   outline: none;
-   border: 1px solid lightgrey;
-   border-radius: 0.26rem;
-   text-indent: 0.26rem;
+   border-radius: 5px;
+   border: 1px solid #D5D4D8;
+   text-indent: 5px;
 }
 
-.form-button {
+.form--button {
    grid-column: 1 / -1;
    font-family: "Karla", sans-serif;
-   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+   border-radius: 5px;
+   background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
    color: white;
    border: none;
-   border-radius: 0.26rem;
    cursor: pointer;
 }
 
-.meme-img {
+.meme {
+   position: relative;
+}
+
+.meme--image {
    max-width: 100%;
+   border-radius: 3px;
+}
+
+.meme--text {
+   position: absolute;
+   width: 80%;
+   text-align: center;
+   left: 50%;
+   transform: translateX(-50%);
+   margin: 15px 0;
+   padding: 0 5px;
+   font-family: impact, sans-serif;
+   font-size: 2em;
+   text-transform: uppercase;
+   color: white;
+   letter-spacing: 1px;
+   text-shadow:
+       2px 2px 0 #000,
+       -2px -2px 0 #000,
+       2px -2px 0 #000,
+       -2px 2px 0 #000,
+       0 2px 0 #000,
+       2px 0 0 #000,
+       0 -2px 0 #000,
+       -2px 0 0 #000,
+       2px 2px 5px #000;
+}
+
+.bottom {
+   bottom: 0;
+}
+
+.top {
+   top: 0;
 }
 
 /* -------------------------Challenge 1------------------------ */
@@ -205,7 +243,7 @@ main {
    user-select: none;
 } */
 /* -------------------------Challenge 7------------------------ */
-.container {
+/* .container {
    height: 100vh;
    background-color: lightgreen;
    padding: 4rem;
@@ -222,4 +260,4 @@ main {
    border: 2px solid white;
    border-radius: 1rem;
    margin-bottom: 2rem;
-}
+} */

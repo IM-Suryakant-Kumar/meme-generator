@@ -1,16 +1,21 @@
 import React from "react";
 import Header from "./components/Header";
 import Meme from "./components/Meme";
-
-// export default function App() {
-
-//    return (
-//       <div>
-//          <Header />
-//          <Meme />
-//       </div>
-//    );
-// }
+/**
+ * Challenge:
+ * - Create a Meme component.
+ * - Inside the Meme component, render a styled form
+ *   with our 2 inputs and the button.
+ * - Don't worry about adding any functionality yet
+ */
+export default function App() {
+   return (
+      <div>
+         <Header />
+         <Meme />
+      </div>
+   );
+}
 
 // -------------------------Challenge 1------------------------
 // export default function App() {
@@ -121,21 +126,21 @@ import Meme from "./components/Meme";
 //    );
 // }
 // -------------------------Challenge 7------------------------
-export default function App() {
-   const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"]);
+// export default function App() {
+//    const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"]);
 
-   const addItem = () => {
-      setThingsArray((prevThingsArray) => {
-         return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`];
-      });
-   };
-   
-   const thingsElem = thingsArray.map((item, idx) => <p key={idx}>{item}</p>);
+//    const addItem = () => {
+//       setThingsArray((prevThingsArray) => {
+//          return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`];
+//       });
+//    };
 
-   return (
-      <div className="container">
-         <button onClick={addItem}>Add Item</button>
-         {thingsElem}
-      </div>
-   );
-}
+//    const thingsElem = thingsArray.map((item, idx) => <p key={idx}>{item}</p>);
+
+//    return (
+//       <div className="container">
+//          <button onClick={addItem}>Add Item</button>
+//          {thingsElem}
+//       </div>
+//    );
+// }
